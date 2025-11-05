@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+
+    <h2 class="mb-4 text-center fw-bold">Edit Book</h2>
+
+    <form action="/update/{{ book.id }}" method="POST" class="shadow p-4 rounded bg-white">
+
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" value="{{ book.title }}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" name="author" value="{{ book.author }}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input type="number" name="quantity" value="{{ book.quantity }}" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+
+    </form>
+
+</div>
+
+</body>
+</html>
